@@ -13,7 +13,7 @@
 <a href="https://twitter.com/raunak0400" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="raunak0400" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/raunak0400" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="raunak0400" height="30" width="40" /></a>
 <a href="https://fb.com/raunak.jha.3726613" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="raunak.jha.3726613" height="30" width="40" /></a>
-<a href="https://instagram.com/raunak_jha__07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="raunak_jha__07" height="30" width="40" /></a>
+<a href="https://instagram.com/raunak.____.07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="raunak_jha__07" height="30" width="40" /></a>
 <a href="https://www.leetcode.com/raunak0400" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="raunak0400" height="30" width="40" /></a>
 </p>
 
