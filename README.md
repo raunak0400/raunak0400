@@ -22,7 +22,10 @@
 
 - 📄 Know about my experiences [http://bit.ly/44s2zlX)
 
-- ⚡ Fun fact **I try to fork my life, to start a brand new thread, but every process points to words unsaid. They say I'm a madter, that my logic is sound, But in the code of my heart, a bug is profound.**
+-  ⚡ **Fun fact →**  
+  _"I try to fork my life, to start a brand new thread, but every process points to words unsaid."_  
+  _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
