@@ -23,8 +23,8 @@
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/raunak0400"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="raunak0400" /></a><a href="https://ko-fi.com/raunak0400"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="raunak0400" /></a></p><br><br>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=raunak0400&show_icons=true&locale=en&layout=compact" alt="raunak0400" /></p>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=yyx990803&show_icons=true&locale=en&layout=compact" alt="yyx990803" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&locale=en" alt="raunak0400" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=yyx990803&show_icons=true&locale=en" alt="yyx990803" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=raunak0400&" alt="raunak0400" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=yyx990803&" alt="yyx990803" /></p>
