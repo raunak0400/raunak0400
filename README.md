@@ -2,11 +2,11 @@
 <h1 align="center">Hi 👋, I'm RAUNAK KUMAR JHA</h1>
 <h3 align="center">🚀 Passionate full stack developer and CSE student exploring new tech stack & Active open-source contributor collaborating with big orgs. Sponsoring me fuels my journey to learn, build, and innovate—let’s grow together! 💡✨</h3>
 
-
-
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yyx990803&label=Profile%20views&color=0e75b6&style=flat" alt="yyx990803" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=yyx990803" alt="yyx990803" /></a> </p>
+
+
 
 
 <p align="left"> <a href="https://twitter.com/raunak0400" target="blank"><img src="https://img.shields.io/twitter/follow/raunak0400?logo=twitter&style=for-the-badge" alt="raunak0400" /></a> </p>
