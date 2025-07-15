@@ -52,7 +52,7 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=yyx990803&show_icons=true&theme=react&hide_border=true" alt="GitHub Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=react&hide_border=true" alt="GitHub Stats" />
     </td>
     <td align="center">
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yyx990803&layout=compact&theme=react&hide_border=true" alt="Top Languages" />
@@ -65,4 +65,4 @@
   </tr>
 </table>
 
-![](https://github-contributor-stats.vercel.app/api?username=yyx990803&limit=5&theme=panda&combine_all_yearly_contributions=true)
+![](https://github-contributor-stats.vercel.app/api?username=raunak0400&limit=5&theme=panda&combine_all_yearly_contributions=true)
