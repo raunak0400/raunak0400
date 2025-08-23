@@ -1,4 +1,4 @@
-![logo](https://github.com/raunak0400/raunak0400/blob/main/banner.png)
+
 <h1 align="center">Hi 👋, I'm RAUNAK KUMAR JHA</h1>
 <h3 align="center">🚀 Passionate full stack developer and CSE student exploring new tech stack & Active open-source contributor collaborating with big orgs. Sponsoring me fuels my journey to learn, build, and innovate—let’s grow together! 💡✨</h3>
 
