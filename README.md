@@ -2,6 +2,8 @@
 <h1 align="center">Hi 👋, I'm RAUNAK KUMAR JHA</h1>
 <h3 align="center">🚀 Passionate full stack developer and CSE student exploring new tech stack & Active open-source contributor collaborating with big orgs. Sponsoring me fuels my journey to learn, build, and innovate—let’s grow together! 💡✨</h3>
 
+<img align="right" alt="Coding" width="400" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">
+
 ![WakaTime Badge](https://wakatime.com/badge/user/18cad418-1288-46b3-a938-1a4e75183603.svg)
 
 ![](https://github-profile-trophy.vercel.app/?username=yyx990803&theme=default&no-frame=false&no-bg=false&margin-w=4)
