@@ -49,6 +49,11 @@
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/raunak0400"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="raunak0400" /></a><a href="https://ko-fi.com/raunak0400"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="raunak0400" /></a></p><br><br>
 
+
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=raunak0400&theme=default&no-frame=false&no-bg=false&margin-w=4)
+
+
 <h2 align="center">📊 GitHub Stats</h2>
 
 <table align="center">
