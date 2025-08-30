@@ -43,7 +43,8 @@ I am a full-stack developer with over 5 years of experience in building scalable
 - 📫 How to reach me contact@imraunak.dev
 - 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/1O0ccUxKs3xXHb3jtQjnRptQtT_i-i2RD/view?usp=sharing)
 -  ⚡ **Fun fact →**  
-  _"I try to fork my life, to start a brand new thread, but every process points to words unsaid."_  
+  "I try to fork my life, to start a brand new thread, 
+  _but every process points to words unsaid."_  
   _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
 
 
