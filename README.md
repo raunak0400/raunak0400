@@ -29,7 +29,7 @@ I am a full-stack developer with over 5 years of experience in building scalable
 
 </div>
 
-![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) ![WakaTime Badge](https://wakatime.com/badge/user/18cad418-1288-46b3-a938-1a4e75183603.svg)
+![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) ![WakaTime Badge](https://wakatime.com/badge/user/18cad418-1288-46b3-a938-1a4e75183603.svg) ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-7.9%20million%20lines%20of%20code-blue)
 
 <p align="center">
   <img alig src="https://github-profile-trophy.vercel.app/?username=guilyx&theme=onedark&column=-1" />
