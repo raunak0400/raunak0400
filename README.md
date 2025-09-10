@@ -31,7 +31,9 @@ I am a full-stack developer with over 5 years of experience in building scalable
 
 ![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) ![WakaTime Badge](https://wakatime.com/badge/user/18cad418-1288-46b3-a938-1a4e75183603.svg)
 
-
+<p align="center">
+  <img alig src="https://github-profile-trophy.vercel.app/?username=guilyx&theme=onedark&column=-1" />
+</p>
 
 ## **💻 About Me**
 - 🔭 I'm currently working on [Hospital Management System](https://github.com/raunak0400/Hospital-Management-System)
