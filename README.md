@@ -35,7 +35,7 @@ I am a full-stack developer with over 5 years of experience in building scalable
 
 ## **💻 About Me**
 - 🔭 I'm currently working on [Hospital Management System](https://github.com/raunak0400/Hospital-Management-System)
-<img align="right" alt="Coding" width="285" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">
+<img align="right" alt="Coding" width="275" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">
 
 - 🌱 I'm currently learning WEB3, CRYPTO, DEVOPS, BLOCKCHAIN
 - 💬 Ask me about DSA,SYSTEM DESIGN,WEB3,CRYPTO,DEVOPS
