@@ -41,7 +41,7 @@ I am a full-stack developer with over 5 years of experience in building scalable
 - 💬 Ask me about DSA,SYSTEM DESIGN,WEB3,CRYPTO,DEVOPS
 - 👨‍💻 My Portfolio is available at (https://imraunak.dev)
 - 📫 How to reach me contact@imraunak.dev
-- 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/1O0ccUxKs3xXHb3jtQjnRptQtT_i-i2RD/view?usp=sharing)
+- 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/16veb7ZypVSEuFMB9srguJYEl7ofNsyKR/view?usp=sharing)
 -  ⚡ **Fun fact →**  
   "I try to fork my life, to start a brand new thread, 
   _but every process points to words unsaid."_  
