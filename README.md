@@ -49,6 +49,9 @@ I am a full-stack developer with over 5 years of experience in building scalable
   _but every process points to words unsaid."_  
   _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
 
+&nbsp;<div align="center">
+  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/jp7blpuc3p6xjsaeanq93b64h)
+</div>
 
 ## **📱 Socials**
 
