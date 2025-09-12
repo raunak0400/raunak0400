@@ -4,7 +4,6 @@
 </p>
 
 
-
 <div align="center">
 
 # Hi 👋, I'm RAUNAK KUMAR JHA!
