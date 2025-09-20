@@ -27,10 +27,10 @@ I am a full-stack developer with over 2 years of experience in building scalable
     <img src="https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=adobeacrobatreader" alt="Download Resume">
   </a>
 </div>
-<div align="center">
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira%20Code&size=22&pause=1000&color=8A2BE2&width=435&lines=Full-Stack%20Dev;Building%20scalable%20apps;Efficient%20applications;Open%20to%20collaboration;Let's%20build%20together!&center=true&vCenter=true&repeat=true)
 
-</div>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira%20Code&size=22&pause=1000&color=8A2BE2&width=435&lines=Full-Stack%20Dev;Building%20scalable%20apps;Efficient%20applications;Open%20to%20collaboration;Let's%20build%20together!&center=true&vCenter=true&repeat=true" alt="Typing SVG" />
+</p>
 
 ![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) ![WakaTime Badge](https://wakatime.com/badge/user/18cad418-1288-46b3-a938-1a4e75183603.svg) ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-7.9%20million%20lines%20of%20code-blue)
 
