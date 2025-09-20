@@ -18,11 +18,15 @@ Full-Stack Developer | Open-Source Contributor
 
 <div align="center">
 
-I am a full-stack developer with over 5 years of experience in building scalable and efficient web applications. I have a strong background in both frontend and backend technologies, and I am passionate about creating seamless user experiences. I am a firm believer in the power of open-source and I actively contribute to various projects.
+I am a full-stack developer with over 2 years of experience in building scalable and efficient web applications. I have a strong background in both frontend and backend technologies, and I am passionate about creating seamless user experiences. I am a firm believer in the power of open-source and I actively contribute to various projects.
 
 </div>
 
 <div align="center">
+  <a href="https://drive.google.com/file/d/16veb7ZypVSEuFMB9srguJYEl7ofNsyKR/view?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=adobeacrobatreader" alt="Download Resume">
+  </a>
+</div>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira%20Code&size=22&pause=1000&color=8A2BE2&width=435&lines=Full-Stack%20Dev;Building%20scalable%20apps;Efficient%20applications;Open%20to%20collaboration;Let's%20build%20together!&center=true&vCenter=true&repeat=true)
 
