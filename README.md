@@ -21,9 +21,8 @@ Full-Stack Developer | Open-Source Contributor
 I am a full-stack developer with over 2 years of experience in building scalable and efficient web applications. I have a strong background in both frontend and backend technologies, and I am passionate about creating seamless user experiences. I am a firm believer in the power of open-source and I actively contribute to various projects.
 
 </div>
-
 <div align="center">
-  <a href="https://drive.google.com/file/d/16veb7ZypVSEuFMB9srguJYEl7ofNsyKR/view?usp=sharing" target="_blank">
+  <a href="https://drive.google.com/file/d/1B3vdUeGqCTcdR1TwmGHY1RGBEUtUWHr5/view?usp=sharing" target="_blank">
     <img src="https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=adobeacrobatreader" alt="Download Resume">
   </a>
 </div>
@@ -46,7 +45,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 - 💬 Ask me about DSA,SYSTEM DESIGN,WEB3,CRYPTO,DEVOPS
 - 👨‍💻 My Portfolio is available at (https://imraunak.dev)
 - 📫 How to reach me contact@imraunak.dev
-- 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/16veb7ZypVSEuFMB9srguJYEl7ofNsyKR/view?usp=sharing)
+- 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/1B3vdUeGqCTcdR1TwmGHY1RGBEUtUWHr5/view?usp=sharing)
 -  ⚡ **Fun fact →**  
   "I try to fork my life, to start a brand new thread, 
   _but every process points to words unsaid."_  
