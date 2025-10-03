@@ -37,6 +37,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
   <img alig src="https://github-profile-trophy.vercel.app/?username=guilyx&theme=onedark&column=-1" />
 </p>
 
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 ## **💻 About Me**
 - 🔭 I'm currently working on [Hospital Management System](https://github.com/raunak0400/Hospital-Management-System)
 <img align="right" alt="Coding" width="320" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">
@@ -55,6 +57,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
   [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/jp7blpuc3p6xjsaeanq93b64h)
 </div>
 
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 ## **📱 Socials**
 
 <p align="left">
@@ -72,10 +76,14 @@ I am a full-stack developer with over 2 years of experience in building scalable
   <a href="https://codeforces.com/profile/raunak0400" target="_blank"><img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" /></a>
 </p>
 
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/raunak0400"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="raunak0400" /></a><a href="https://ko-fi.com/raunak0400"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="raunak0400" /></a></p><br><br>
 
-## 💎 Project Showcase
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+## **💎 Project Showcase**
 
 <div align="center">
   <a href="https://github.com/raunak0400/Capstone-project" target="_blank">
@@ -86,7 +94,12 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </a>
 </div>
 
-# ⚒️ Skills
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+##  <img src="https://media.tenor.com/q4L3wKD-P7YAAAAj/hydra-we-bhack.gif" height="30" style="margin-right: 10px; vertical-align: middle;"/>  My Tech Arsenal 
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+<div align=center>
+
 
 <h3 align="left">🏷 Languages and Tools:</h3>
 
@@ -156,11 +169,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>Bootstrap
     </td>
     <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=css" alt="CSS3" width="65" height="65" />
+        <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/67f477ed-6624-42da-99f0-1a7b1a16eecb" width="65" height="65">
       <br>CSS3
     </td>
     <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=html" alt="HTML5" width="65" height="65" />
+        <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/29fd6286-4e7b-4d6c-818f-c4765d5e39a9" width="65" height="65">
       <br>HTML5
     </td>
     <td align="center" width="116">
@@ -282,7 +295,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>Docker
     </td>
     <td align="center" width="116">
-        <img src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" width="65" height="65" />
+        <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="65" height="65"><br><br>
       <br>Git
     </td>
     <td align="center" width="116">
@@ -312,7 +325,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <table align="center">
   <tr>
     <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" width="65" height="65" />
+        <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/3c16d4f2-b757-4c70-8f42-43d5dddd2c36" width="65" height="65">
       <br>Firebase
     </td>
     <td align="center" width="116">
@@ -362,11 +375,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>Framer
     </td>
     <td align="center" width="116">
-        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" width="65" height="65" />
+        <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="65" height="65">
       <br>GitHub
     </td>
     <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" width="65" height="65" />
+        <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="65" height="65">
       <br>VS Code
     </td>
     <td align="center" width="116">
@@ -400,7 +413,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <div align="center">
 
----
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 
 ## **📊 Analytics & Statistics**
@@ -484,14 +497,46 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </a>
 </div>
 
-### ✍️ Dev Quote
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+## 🔰 GSSoC and LeetCode 🔰
 
+<div align="center">
+
+### 🌟 GSSoC Badges  
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/GSSoC24">
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/Postman%20White.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/1.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/2.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/3.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/4.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/5.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/6.png" width="105px" height="105px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/7.png" width="100px" height="100px" />
+        <img src="https://raw.githubusercontent.com/GSSoC24/Postman-Challenge/main/docs/assets/8.png" width="100px" height="100px" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+### 📈 LeetCode Progress  
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/raunak0400?ext=heatmap&theme=dark)](https://leetcode.com/raunak0400/)
+
+</div>
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+### ✍️ Dev Quote
 <p align="center">
   <em>"Code is like humor. When you have to explain it, it's bad." — Cory House</em>
 </p>
 
-
----
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="50"><em>Let's connect and build the future together! 🚀 <em>
 <p align="center">  
   Made with 💖 by a Passionate Programmer <b>Raunak Kumar Jha</b>  
