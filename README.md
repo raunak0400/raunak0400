@@ -498,11 +498,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-## 🔰 GSSoC and LeetCode 🔰
+
 
 <div align="center">
 
-### 🌟 GSSoC Badges  
+### 🌟 GSSoC Badges 🔰  
 
 <table>
   <tr>
@@ -522,7 +522,9 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
+
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 
 ### 📈 LeetCode Progress  
 
@@ -543,3 +545,5 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </p>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=6667AB&center=true&vCenter=true&lines=A+%E2%AD%90++on+my+repo+is+appreciated!;Thanks+for+visiting+my+profile+%F0%9F%98%83;Happy+coding!+%F0%9F%9A%80)
+
+###### raunak0400___________________________________________________________________________________________________© 2025 Raunak Kumar Jha – Crafted with 💖
