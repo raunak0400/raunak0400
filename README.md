@@ -424,13 +424,54 @@ I am a full-stack developer with over 2 years of experience in building scalable
 ![My GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yyx990803&theme=dracula&custom_title=Raunak%20Kumar%20Jha's%20Contribution%20Graph)
 
 
+## 🔍 Profile Summary & Quick Cards
 
-<div align="center">
+<div align="center" markdown="1">
 
+<!-- Profile summary -->
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=raunak0400&theme=dracula" alt="GitHub Profile Summary" />
 
 </div>
 
+---
+
+## 🧾 Extra Insights (cards)
+
+<div align="center">
+
+<!-- Summary cards — consistent theme -->
+<img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=raunak0400&theme=dracula" alt="Summary Stats" />
+<img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=raunak0400&theme=dracula" alt="Repos Per Language" />
+<img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=raunak0400&theme=dracula" alt="Most Commit Language" />
+<img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=raunak0400&theme=dracula" alt="Productive Time" />
+
+</div>
+
+---
+
+## 📈 OSSInsight Dashboard
+
+<div align="center">
+
+<a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=151940169" target="_blank" rel="noopener noreferrer">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=dark">
+    <img alt="Dashboard stats of @raunak0400" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=light" width="700">
+  </picture>
+</a>
+
+</div>
+
+## 🛠️ Currently Working On
+
+<div align="center">
+  <a href="https://next.ossinsight.io/widgets/official/compose-currently-working-on?user_id=151940169&activity_type=all" target="_blank" style="display: block">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-currently-working-on/thumbnail.png?user_id=151940169&activity_type=all&image_size=auto&color_scheme=dark" width="497.5" height="auto">
+      <img alt="@raunak0400's Recent Work - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-currently-working-on/thumbnail.png?user_id=151940169&activity_type=all&image_size=auto&color_scheme=light" width="497.5" height="auto">
+    </picture>
+  </a>
+</div>
 
 ### ✍️ Dev Quote
 
