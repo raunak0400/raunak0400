@@ -486,7 +486,9 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
+
 ## 🛠️ Currently Working On
+
 
 <div align="center">
   <a href="https://next.ossinsight.io/widgets/official/compose-currently-working-on?user_id=151940169&activity_type=all" target="_blank" style="display: block">
@@ -496,6 +498,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
     </picture>
   </a>
 </div>
+
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
