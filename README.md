@@ -75,6 +75,17 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/raunak0400"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="raunak0400" /></a><a href="https://ko-fi.com/raunak0400"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="raunak0400" /></a></p><br><br>
 
+## 💎 Project Showcase
+
+<div align="center">
+  <a href="https://github.com/raunak0400/Capstone-project" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Capstone-project&theme=dracula" alt="Hospital Management System" />
+  </a>
+  <a href="https://github.com/raunak0400/Expense-tracker" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Expense-tracker&theme=dracula" alt="AnotherRepo" />
+  </a>
+</div>
+
 # ⚒️ Skills
 
 <h3 align="left">🏷 Languages and Tools:</h3>
