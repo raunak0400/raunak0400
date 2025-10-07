@@ -86,8 +86,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
 ## **💎 Project Showcase**
 
 <div align="center">
-  <a href="https://github.com/raunak0400/Capstone-project" target="_blank">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Capstone-project&theme=dracula" alt="Hospital Management System" />
+  <a href="https://github.com/raunak0400/Nullpoint-x-ITNU" target="_blank">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Nullpoint-x-ITNU&theme=dracula" alt="Nullpoint-x-ITNU" />
   </a>
   <a href="https://github.com/raunak0400/Expense-tracker" target="_blank">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Expense-tracker&theme=dracula" alt="AnotherRepo" />
