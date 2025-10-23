@@ -83,19 +83,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## **💎 Project Showcase**
-
-<div align="center">
-  <a href="https://github.com/raunak0400/Nullpoint-x-ITNU" target="_blank">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Nullpoint-x-ITNU&theme=dracula" alt="Nullpoint-x-ITNU" />
-  </a>
-  <a href="https://github.com/raunak0400/Expense-tracker" target="_blank">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=raunak0400&repo=Expense-tracker&theme=dracula" alt="AnotherRepo" />
-  </a>
-</div>
-
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-
 ##  <img src="https://media.tenor.com/q4L3wKD-P7YAAAAj/hydra-we-bhack.gif" height="30" style="margin-right: 10px; vertical-align: middle;"/>  My Tech Arsenal 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 <div align=center>
