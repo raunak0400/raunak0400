@@ -514,7 +514,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <div align="center">
 
-### 🎖️ Holopin Badges 2025
+### 🎖️ Hacktoberfest Badges 2025
 [![An image of @raunak0400's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/raunak0400)](https://holopin.io/@raunak0400)
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
