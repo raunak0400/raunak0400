@@ -1,6 +1,6 @@
 <!-- Wavy Banner -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9A7,100:FFB86C&height=200&section=header&text=RAUNAK%20KUMAR%20JHA&fontSize=40&fontAlignY=35&desc=%20Full%20Stack%20Developer%20%7C%20CSE%20Student%20%7C%20Open%20Source%20Contributor&descSize=22&descAlign=50" alt="wavy banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:020024,50:090979,100:00d4ff&text=RAUNAK%20KUMAR%20JHA&section=header&fontSize=70&fontAlignY=30&animation=fadeIn&desc=Full%20Stack%20Developer%20(Backend-Centric)%20|%20DevOps%20Engineer%20|%20Open%20Source%20Contributor&descSize=21&descAlignY=45&fontColor=ffffff" />
 </p>
 
 
