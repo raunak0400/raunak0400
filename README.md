@@ -12,7 +12,7 @@
 
 <div align="center">
 
-Full-Stack Developer | Open-Source Contributor
+Full-Stack Developer (Backend-Centric) | DevOps Engineer | Open-Source Contributor
 
 </div>
 
