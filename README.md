@@ -147,15 +147,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>Next.js
     </td>
   </tr>
-  <tr>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=vue" alt="Vue.js" width="40" height="40" />
-      <br>Vue.js
-    </td>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=express" alt="Express.js" width="40" height="40" />
-      <br>Express.js
-    </td>
   </tr>
 </table>
 
