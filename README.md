@@ -267,23 +267,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 ## **📊 Analytics & Statistics**
 
-<div align="center">
 
-<table>
-<tr>
-<td>
-
-<img src="https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=radical&custom_title=Raunak%20Kumar%20Jha%20Stats&cache_seconds=1800" alt="GitHub Stats" />
-</td>
-<td>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raunak0400&layout=compact&theme=dracula&hide_border=true&card_width=400&cache_seconds=1800" alt="Most Used Languages" />
-
-</td>
-</tr>
-</table>
-
-</div>
 
 <div align="center">
 
@@ -291,9 +275,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
-## My Contribution Graph
+## 🌐 My Contribution Graph
 
-![My GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=raunak0400&theme=dracula&custom_title=Raunak%20Kumar%20Jha's%20Contribution%20Graph)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+</div>
 
 ## 🔍 Profile Summary & Quick Cards
 
@@ -344,11 +330,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </a>
 </div>
 
-## 🌐 3D Contribution Graph
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
-</div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
