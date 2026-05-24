@@ -52,7 +52,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
   _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
 
 &nbsp;<div align="center">
-  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/jp7blpuc3p6xjsaeanq93b64h)
+  [![Last.fm](https://novatorem.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff")](https://novatorem.vercel.app/redirect)
 </div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
