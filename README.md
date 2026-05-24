@@ -273,11 +273,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <tr>
 <td>
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=radical&custom_title=Raunak%20Kumar%20Jha%20Stat's)
+<img src="https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=radical&custom_title=Raunak%20Kumar%20Jha%20Stats&cache_seconds=1800" alt="GitHub Stats" />
 </td>
 <td>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raunak0400&layout=compact&theme=dracula&hide_border=true&card_width=400" alt="Most Used Languages" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raunak0400&layout=compact&theme=dracula&hide_border=true&card_width=400&cache_seconds=1800" alt="Most Used Languages" />
 
 </td>
 </tr>
@@ -347,7 +347,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 ## 🌐 3D Contribution Graph
 
 <div align="center">
-  <img src="https://github.com/raunak0400/raunak0400/blob/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+  <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
 </div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
