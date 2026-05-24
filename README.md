@@ -3,7 +3,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:020024,50:090979,100:00d4ff&text=RAUNAK%20KUMAR%20JHA&section=header&fontSize=70&fontAlignY=30&animation=fadeIn&desc=Full%20Stack%20Developer%20(Backend-Centric)%20|%20DevOps%20Engineer%20|%20Open%20Source%20Contributor&descSize=21&descAlignY=45&fontColor=ffffff" />
 </p>
 
-
 <div align="center">
 
 # Hi 👋, I'm RAUNAK KUMAR JHA!
@@ -31,7 +30,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira%20Code&size=22&pause=1000&color=8A2BE2&width=435&lines=Full-Stack%20Dev;Building%20scalable%20apps;Efficient%20applications;Open%20to%20collaboration;Let's%20build%20together!&center=true&vCenter=true&repeat=true" alt="Typing SVG" />
 </p>
 
-![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) [![wakatime](https://wakatime.com/badge/user/b0e62fd5-64f1-422f-ba63-28e1785afd6c.svg)](https://wakatime.com/@b0e62fd5-64f1-422f-ba63-28e1785afd6c) 
+![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) [![wakatime](https://wakatime.com/badge/user/b0e62fd5-64f1-422f-ba63-28e1785afd6c.svg)](https://wakatime.com/@b0e62fd5-64f1-422f-ba63-28e1785afd6c)
 <p align="center">
   <img alig src="https://github-profile-trophy.vercel.app/?username=guilyx&theme=onedark&column=-1" />
 </p>
@@ -39,15 +38,16 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## **💻 About Me**
+
 <img align="right" alt="Coding" width="320" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">
 
 - 🌱 I'm currently learning WEB3, CRYPTO, DEVOPS, BLOCKCHAIN
 - 💬 Ask me about DSA,SYSTEM DESIGN,WEB3,CRYPTO,DEVOPS
-- 👨‍💻 My Portfolio is available at (https://imraunak.dev)
-- 📫 How to reach me contact@imraunak.dev
+- 👨‍💻 My Portfolio is available at (<https://imraunak.dev>)
+- 📫 How to reach me <contact@imraunak.dev>
 - 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/1B3vdUeGqCTcdR1TwmGHY1RGBEUtUWHr5/view?usp=sharing)
--  ⚡ **Fun fact →**  
-  "I try to fork my life, to start a brand new thread, 
+- ⚡ **Fun fact →**  
+  "I try to fork my life, to start a brand new thread,  
   _but every process points to words unsaid."_  
   _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
 
@@ -81,11 +81,13 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-##  <img src="https://media.tenor.com/q4L3wKD-P7YAAAAj/hydra-we-bhack.gif" height="30" style="margin-right: 10px; vertical-align: middle;"/>  My Tech Arsenal 
+## <img src="https://media.tenor.com/q4L3wKD-P7YAAAAj/hydra-we-bhack.gif" height="30" style="margin-right: 10px; vertical-align: middle;"/> My Tech Arsenal
+
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 <div align=center>
 
 #### 🖥️ Programming Languages
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -116,6 +118,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </table>
 
 #### 🎨 Frontend Development
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -151,6 +154,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </table>
 
 #### ⚙️ Backend Development
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -173,6 +177,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </table>
 
 #### 🗄️ Databases
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -198,7 +203,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
-####  DevOps
+#### DevOps
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -233,6 +239,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </table>
 
 #### ☁️ Backend as a Service (BaaS)
+
 <table align="center">
   <tr>
     <td align="center" width="116">
@@ -254,11 +261,9 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
-
 <div align="center">
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-
 
 ## **📊 Analytics & Statistics**
 
@@ -268,7 +273,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <tr>
 <td>
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=yyx990803&show_icons=true&theme=radical&custom_title=Raunak%20Kumar%20Jha%20Stat's)
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=radical&custom_title=Raunak%20Kumar%20Jha%20Stat's)
 </td>
 <td>
 
@@ -286,11 +291,9 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
-
 ## My Contribution Graph
 
-![My GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yyx990803&theme=dracula&custom_title=Raunak%20Kumar%20Jha's%20Contribution%20Graph)
-
+![My GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=raunak0400&theme=dracula&custom_title=Raunak%20Kumar%20Jha's%20Contribution%20Graph)
 
 ## 🔍 Profile Summary & Quick Cards
 
@@ -330,9 +333,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
-
 ## 🛠️ Currently Working On
-
 
 <div align="center">
   <a href="https://next.ossinsight.io/widgets/official/compose-currently-working-on?user_id=151940169&activity_type=all" target="_blank" style="display: block">
@@ -343,13 +344,17 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </a>
 </div>
 
+## 🌐 3D Contribution Graph
+
+<div align="center">
+  <img src="https://github.com/raunak0400/raunak0400/blob/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+</div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-
 <div align="center">
 
-### 🌟 GSSoC Badges 🔰  
+### 🌟 GSSoC Badges 🔰
 
 <table>
   <tr>
@@ -372,12 +377,12 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <div align="center">
 
 ### 🎖️ Hacktoberfest Badges 2025
+
 [![An image of @raunak0400's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/raunak0400)](https://holopin.io/@raunak0400)
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-
-### 📈 LeetCode Progress  
+### 📈 LeetCode Progress
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/raunak0400?ext=heatmap&theme=dark)](https://leetcode.com/raunak0400/)
 
@@ -385,14 +390,15 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ### ✍️ Dev Quote
+
 <p align="center">
   <em>"Code is like humor. When you have to explain it, it's bad." — Cory House</em>
 </p>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="50"><em>Let's connect and build the future together! 🚀 <em>
-<p align="center">  
-  Made with 💖 by a Passionate Programmer <b>Raunak Kumar Jha</b>  
+<p align="center">
+  Made with 💖 by a Passionate Programmer <b>Raunak Kumar Jha</b>
 </p>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=6667AB&center=true&vCenter=true&lines=A+%E2%AD%90++on+my+repo+is+appreciated!;Thanks+for+visiting+my+profile+%F0%9F%98%83;Happy+coding!+%F0%9F%9A%80)
