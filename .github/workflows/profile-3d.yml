@@ -26,4 +26,4 @@ jobs:
           git pull --rebase origin main
           git add -A
           git diff --quiet HEAD || git commit -m "chore: update 3D contribution graph"
-          git push --force-with-lease
+          git push --force
