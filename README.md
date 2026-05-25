@@ -57,7 +57,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## **📱 Socials**
+## **Socials**
 
 <p align="left">
   <a href="mailto:contact@imraunak.dev" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
@@ -86,7 +86,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 <div align=center>
 
-#### 🖥️ Programming Languages
+#### Programming Languages
 
 <table align="center">
   <tr>
@@ -110,14 +110,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
         <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="TypeScript" width="40" height="40" />
       <br>TypeScript
     </td>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=rust" alt="Rust" width="40" height="40" />
-      <br>Rust
-    </td>
+
   </tr>
 </table>
 
-#### 🎨 Frontend Development
+#### Frontend Development
 
 <table align="center">
   <tr>
@@ -126,16 +123,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>React
     </td>
     <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=react" alt="React Native" width="40" height="40" />
-      <br>React Native
-    </td>
-    <td align="center" width="116">
         <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" width="40" height="40" />
       <br>Tailwind CSS
-    </td>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" width="40" height="40" />
-      <br>Bootstrap
     </td>
     <td align="center" width="116">
         <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/67f477ed-6624-42da-99f0-1a7b1a16eecb" alt="CSS3" width="40" height="40">
@@ -153,7 +142,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
-#### ⚙️ Backend Development
+#### Backend Development
 
 <table align="center">
   <tr>
@@ -176,7 +165,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
-#### 🗄️ Databases
+#### Databases
 
 <table align="center">
   <tr>
@@ -192,10 +181,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
         <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" width="40" height="40" />
       <br>PostgreSQL
     </td>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=cassandra" alt="Cassandra" width="40" height="40" />
-      <br>Cassandra
-    </td>
+
     <td align="center" width="116">
         <img src="https://skillicons.dev/icons?i=redis" alt="Redis" width="40" height="40" />
       <br>Redis
@@ -223,10 +209,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
         <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="Kubernetes" width="40" height="40" />
       <br>Kubernetes
     </td>
-    <td align="center" width="116">
-        <img src="https://skillicons.dev/icons?i=jenkins" alt="Jenkins" width="40" height="40" />
-      <br>Jenkins
-    </td>
+
     <td align="center" width="116">
         <img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="Nginx" width="40" height="40" />
       <br>Nginx
@@ -238,7 +221,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
   </tr>
 </table>
 
-#### ☁️ Backend as a Service (BaaS)
+#### Backend as a Service (BaaS)
 
 <table align="center">
   <tr>
@@ -265,7 +248,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## **📊 Analytics & Statistics**
+## **Analytics & Statistics**
 
 
 
@@ -275,24 +258,14 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
-## 🌐 My Contribution Graph
+## My Contribution Graph
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
 </div>
 
-## 🔍 Profile Summary & Quick Cards
 
-<div align="center" markdown="1">
-
-<!-- Profile summary -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=raunak0400&theme=dracula" alt="GitHub Profile Summary" />
-
-</div>
-
----
-
-## 🧾 Extra Insights (cards)
+## Extra Insights (cards)
 
 <div align="center">
 
@@ -300,13 +273,13 @@ I am a full-stack developer with over 2 years of experience in building scalable
 <img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=raunak0400&theme=dracula" alt="Summary Stats" />
 <img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=raunak0400&theme=dracula" alt="Repos Per Language" />
 <img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=raunak0400&theme=dracula" alt="Most Commit Language" />
-<img height="140" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=raunak0400&theme=dracula" alt="Productive Time" />
+
 
 </div>
 
 ---
 
-## 📈 OSSInsight Dashboard
+## OSSInsight Dashboard
 
 <div align="center">
 
@@ -319,23 +292,14 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 </div>
 
-## 🛠️ Currently Working On
 
-<div align="center">
-  <a href="https://next.ossinsight.io/widgets/official/compose-currently-working-on?user_id=151940169&activity_type=all" target="_blank" style="display: block">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-currently-working-on/thumbnail.png?user_id=151940169&activity_type=all&image_size=auto&color_scheme=dark" width="497.5" height="auto">
-      <img alt="@raunak0400's Recent Work - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-currently-working-on/thumbnail.png?user_id=151940169&activity_type=all&image_size=auto&color_scheme=light" width="497.5" height="auto">
-    </picture>
-  </a>
-</div>
 
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 <div align="center">
 
-### 🌟 GSSoC Badges 🔰
+### GSSoC Badges
 
 <table>
   <tr>
@@ -357,13 +321,13 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <div align="center">
 
-### 🎖️ Hacktoberfest Badges 2025
+### Hacktoberfest Badges 2025
 
 [![An image of @raunak0400's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/raunak0400)](https://holopin.io/@raunak0400)
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-### 📈 LeetCode Progress
+### LeetCode Progress
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/raunak0400?ext=heatmap&theme=dark)](https://leetcode.com/raunak0400/)
 
