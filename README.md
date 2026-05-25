@@ -46,10 +46,12 @@ I am a full-stack developer with over 2 years of experience in building scalable
 - 👨‍💻 My Portfolio is available at (<https://imraunak.dev>)
 - 📫 How to reach me <contact@imraunak.dev>
 - 📄 My Resume is available here [RESUME](https://drive.google.com/file/d/1B3vdUeGqCTcdR1TwmGHY1RGBEUtUWHr5/view?usp=sharing)
-- ⚡ **Fun fact →**  
-  "I try to fork my life, to start a brand new thread,  
-  _but every process points to words unsaid."_  
-  _"They say I'm a master, that my logic is sound — but in the code of my heart, a bug is profound."_
+- ⚡ **Fun fact →**
+
+  > *"I try to fork my life, to start a brand new thread,*
+  > *but every process points to words unsaid.*
+  > *They say I'm a master, that my logic is sound —*
+  > *but in the code of my heart, a bug is profound."*
 
 &nbsp;<div align="center">
   [![Last.fm](https://novatorem.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff")](https://novatorem.vercel.app/redirect)
@@ -181,7 +183,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
         <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" width="40" height="40" />
       <br>PostgreSQL
     </td>
-
     <td align="center" width="116">
         <img src="https://skillicons.dev/icons?i=redis" alt="Redis" width="40" height="40" />
       <br>Redis
@@ -209,7 +210,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
         <img src="https://techstack-generator.vercel.app/kubernetes-icon.svg" alt="Kubernetes" width="40" height="40" />
       <br>Kubernetes
     </td>
-
     <td align="center" width="116">
         <img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="Nginx" width="40" height="40" />
       <br>Nginx
