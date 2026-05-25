@@ -279,12 +279,13 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 ---
 
-## GitHub Stats
+## OSSInsight Dashboard
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=raunak0400&show_icons=true&theme=radical&hide_border=true&border_radius=10&count_private=true" alt="GitHub Stats" height="180" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raunak0400&layout=compact&theme=radical&hide_border=true&border_radius=10&count_private=true" alt="Top Languages" height="180" />
+<a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=151940169" target="_blank" rel="noopener noreferrer">
+  <img alt="Dashboard stats of @raunak0400" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=dark" width="700" />
+</a>
 
 </div>
 
