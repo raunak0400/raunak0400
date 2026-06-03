@@ -278,12 +278,11 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 ## OSSInsight Dashboard
 
-<a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=151940169" target="_blank" style="display: block" align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=dark" width="771" height="auto">
-    <img alt="Dashboard stats of @raunak0400" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=light" width="771" height="auto">
-  </picture>
-</a>
+<div align="center">
+  <a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=151940169" target="_blank" rel="noopener noreferrer">
+    <img alt="Dashboard stats of @raunak0400" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=151940169&image_size=auto&color_scheme=dark" width="771" height="auto" />
+  </a>
+</div>
 
 
 
