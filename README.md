@@ -31,9 +31,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
 </p>
 
 ![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) [![wakatime](https://wakatime.com/badge/user/b0e62fd5-64f1-422f-ba63-28e1785afd6c.svg)](https://wakatime.com/@b0e62fd5-64f1-422f-ba63-28e1785afd6c)
-<p align="center">
-  <img align="center" src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/trophy.svg" alt="GitHub Trophies" />
-</p>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
