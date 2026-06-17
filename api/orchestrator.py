@@ -651,8 +651,8 @@ def preview_page() -> Response:
 @app.route("/redirect")
 def redirect_to_song() -> Response:
     """Redirect to the currently playing song."""
-    # Default fallback URL (e.g., project repository)
-    fallback_url = "https://github.com/novatorem/novatorem"
+    # Default fallback URL
+    fallback_url = "https://open.spotify.com/user/raunak0400"
 
     try:
         service_name, service = get_active_service()
@@ -672,6 +672,30 @@ def redirect_to_song() -> Response:
 def health_check() -> Response:
     """Health check endpoint for monitoring."""
     return Response("OK", status=200, mimetype="text/plain")
+
+
+@app.route("/debug")
+def debug_env() -> Response:
+    """Debug endpoint: shows masked env var status to diagnose Vercel config issues."""
+    import json as _json
+    from .config import spotify_config
+
+    def mask(val: str) -> str:
+        if not val:
+            return "NOT SET"
+        return val[:6] + "..." + val[-4:] + f" (len={len(val)})"
+
+    data = {
+        "SPOTIFY_CLIENT_ID": mask(spotify_config.client_id),
+        "SPOTIFY_SECRET_ID": mask(spotify_config.client_secret),
+        "SPOTIFY_REFRESH_TOKEN": mask(spotify_config.refresh_token),
+        "is_configured": spotify_config.is_configured(),
+    }
+    return Response(
+        _json.dumps(data, indent=2),
+        status=200,
+        mimetype="application/json",
+    )
 
 
 # ============================================================================
