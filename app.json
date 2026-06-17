@@ -1,0 +1,41 @@
+{
+    "name": "raunak0400",
+    "description": "Realtime profile Readme displaying currently playing song using Spotify or Last.fm API.",
+    "scripts": {
+        "postdeploy": "gunicorn --workers=1 api.orchestrator:app"
+    },
+    "env": {
+        "SPOTIFY_CLIENT_ID": {
+            "description": "Spotify application client ID (required for Spotify)",
+            "required": false
+        },
+        "SPOTIFY_REFRESH_TOKEN": {
+            "description": "Spotify OAuth refresh token (required for Spotify)",
+            "required": false
+        },
+        "SPOTIFY_SECRET_ID": {
+            "description": "Spotify application client secret (required for Spotify)",
+            "required": false
+        },
+        "LAST_FM_API_KEY": {
+            "description": "Last.fm API key (required for Last.fm)",
+            "required": false
+        },
+        "LAST_FM_USERNAME": {
+            "description": "Last.fm username (required for Last.fm)",
+            "required": false
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "stack": "heroku-20"
+}
