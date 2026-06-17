@@ -50,6 +50,8 @@ I am a full-stack developer with over 2 years of experience in building scalable
   > *They say I'm a master, that my logic is sound —*
   > *but in the code of my heart, a bug is profound."*
 
+<br><br><br>
+
 <div align="center">
   <a href="https://open.spotify.com/user/raunak0400">
     <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Spotify Now Playing" />
