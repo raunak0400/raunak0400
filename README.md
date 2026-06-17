@@ -32,17 +32,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 ![Profile views](https://komarev.com/ghpvc/?username=raunak0400&label=Profile%20Views&color=blueviolet&style=flat) [![wakatime](https://wakatime.com/badge/user/b0e62fd5-64f1-422f-ba63-28e1785afd6c.svg)](https://wakatime.com/@b0e62fd5-64f1-422f-ba63-28e1785afd6c)
 
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## 🎵 Now Playing on Spotify
-
-<div align="center">
-  <a href="https://open.spotify.com/user/raunak0400">
-    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&show_status=true" alt="Spotify Now Playing" />
-  </a>
-</div>
-
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## **💻 About Me**
 
@@ -61,6 +51,14 @@ I am a full-stack developer with over 2 years of experience in building scalable
   > *but in the code of my heart, a bug is profound."*
 
 
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+<div align="center">
+  <a href="https://open.spotify.com/user/raunak0400">
+    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" alt="Spotify Now Playing" />
+  </a>
+</div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
