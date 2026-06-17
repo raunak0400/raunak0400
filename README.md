@@ -54,14 +54,6 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-<div align="center">
-  <a href="https://open.spotify.com/user/raunak0400">
-    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" alt="Spotify Now Playing" />
-  </a>
-</div>
-
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-
 ## **Socials**
 
 <p align="left">
@@ -77,6 +69,14 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/raunak0400"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="raunak0400" /></a><a href="https://ko-fi.com/raunak0400"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="raunak0400" /></a></p><br><br>
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+<div align="center">
+  <a href="https://open.spotify.com/user/raunak0400">
+    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" width="320" alt="Spotify Now Playing" />
+  </a>
+</div>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
