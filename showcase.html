@@ -3,315 +3,687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Widget Showcase</title>
+    <title>Showcase Your Vibe · Spotify Widget Gallery</title>
+    <meta name="description" content="A live Spotify Now Playing widget for your GitHub profile. Customizable. Beautiful. Always in sync.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        /* ── RESET ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         :root {
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-main: #ffffff;
-            --text-muted: rgba(255, 255, 255, 0.7);
-            --accent: #1db954; /* Spotify Green */
+            --green: #1db954;
+            --green-bright: #1ed760;
+            --green-glow: rgba(29, 185, 84, 0.25);
+            --bg: #0a0a0a;
+            --card: #111;
+            --card-hover: #161616;
+            --border: rgba(255,255,255,0.07);
+            --border-hover: rgba(29,185,84,0.25);
+            --muted: rgba(255,255,255,0.45);
+            --secondary: rgba(255,255,255,0.68);
         }
-
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Outfit', sans-serif;
-            background: #0f0c29;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #121212);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 5px; }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 1.1rem 3rem;
+            background: rgba(10,10,10,0.8);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 0.55rem;
+            text-decoration: none; color: #fff; font-weight: 700; font-size: 0.95rem;
+        }
+        .live-dot {
+            width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+            animation: livePulse 2s infinite;
+        }
+        @keyframes livePulse {
+            0%,100% { box-shadow: 0 0 0 0 rgba(29,185,84,0.6); }
+            50%       { box-shadow: 0 0 0 5px rgba(29,185,84,0); }
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a {
+            color: var(--muted); text-decoration: none;
+            font-size: 0.875rem; font-weight: 500; transition: color .2s;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-gh {
+            background: var(--green); color: #000 !important;
+            padding: 0.45rem 1.2rem; border-radius: 100px; font-weight: 700 !important;
+            transition: background .2s, transform .2s !important;
+        }
+        .nav-gh:hover { background: var(--green-bright) !important; transform: scale(1.04); }
+
+        /* ── HERO ── */
+        #hero {
+            position: relative; min-height: 100vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            text-align: center; overflow: hidden;
+            padding: 9rem 2rem 5rem;
+        }
+        #topo-canvas {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%; z-index: 0;
+        }
+        .hero-inner { position: relative; z-index: 2; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 0.45rem;
+            background: rgba(29,185,84,0.08);
+            border: 1px solid rgba(29,185,84,0.28);
+            color: var(--green); font-size: 0.72rem;
+            font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+            padding: .38rem 1rem; border-radius: 100px;
+            margin-bottom: 2rem;
+            animation: fadeDown .8s ease both;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-title {
+            font-size: clamp(3.6rem, 9.5vw, 8.5rem);
+            font-weight: 900; line-height: .93; letter-spacing: -.045em;
+            margin-bottom: 1.5rem;
+            animation: fadeUp .9s ease .18s both;
+        }
+        .hero-title .green { color: var(--green); }
+        .hero-sub {
+            font-size: 1.15rem; color: var(--secondary); line-height: 1.65;
+            max-width: 420px; margin: 0 auto 3rem;
+            animation: fadeUp .9s ease .32s both;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* ── FLOATING 3-D WIDGET ── */
+        .widget-stage {
+            margin: 0 auto 3.5rem; width: fit-content;
+            animation: fadeUp 1s ease .48s both;
+        }
+        .widget-3d-wrap { perspective: 900px; cursor: none; }
+        .widget-card {
+            border-radius: 12px; overflow: hidden;
+            box-shadow:
+                0 0 0 1px rgba(29,185,84,0.18),
+                0 25px 70px rgba(0,0,0,0.75),
+                0 0 90px rgba(29,185,84,0.07);
+            animation: floatCard 4.2s ease-in-out infinite;
+            transform-style: preserve-3d;
+            transition: transform .25s ease;
+        }
+        .widget-card img { display: block; width: min(520px, 90vw); }
+        @keyframes floatCard {
+            0%,100% { transform: translateY(0)   rotateX(2deg) rotateY(0deg); }
+            50%      { transform: translateY(-14px) rotateX(-1deg) rotateY(1.5deg); }
+        }
+        /* glow beneath */
+        .widget-stage::after {
+            content: '';
+            display: block; height: 0;
+            box-shadow: 0 0 80px 8px rgba(29,185,84,0.22);
+            position: relative; top: 16px; z-index: -1;
+            animation: floatCard 4.2s ease-in-out infinite;
         }
 
-        header {
-            text-align: center;
-            margin: 4rem 1rem 2rem;
-            max-width: 800px;
+        /* ── HERO BUTTONS ── */
+        .hero-btns {
+            display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap;
+            animation: fadeUp 1s ease .62s both;
         }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #ffffff, #a8a8a8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+        .btn-solid {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: var(--green); color: #000;
+            font-weight: 700; font-size: 1rem;
+            padding: .82rem 2rem; border-radius: 100px;
+            text-decoration: none; border: none; cursor: pointer;
+            transition: background .2s, transform .2s, box-shadow .2s;
+            position: relative; overflow: hidden;
         }
-
-        p.subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            line-height: 1.6;
+        .btn-solid:hover { background: var(--green-bright); transform: translateY(-3px); box-shadow: 0 10px 35px rgba(29,185,84,0.45); }
+        .btn-ghost {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: transparent; color: #fff;
+            font-weight: 600; font-size: 1rem;
+            padding: .82rem 2rem; border-radius: 100px;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: border-color .2s, background .2s, transform .2s;
         }
+        .btn-ghost:hover { border-color: rgba(255,255,255,.45); background: rgba(255,255,255,.05); transform: translateY(-3px); }
 
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
+        /* ── SHARED SECTION ── */
+        .section-wrap { max-width: 1080px; margin: 0 auto; padding: 6rem 2rem; }
+        .section-label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--green); margin-bottom: .9rem; }
+        .section-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; margin-bottom: 1rem; }
+        .section-sub   { font-size: 1.05rem; color: var(--secondary); line-height: 1.65; max-width: 520px; }
+
+        /* ── GALLERY GRID ── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+        .g-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px; padding: 1.75rem;
+            position: relative; overflow: hidden;
+            opacity: 0; transform: translateY(32px);
+            transition: opacity .55s ease, transform .55s ease, border-color .3s, background .3s;
+        }
+        .g-card.in-view { opacity: 1; transform: translateY(0); }
+        .g-card:nth-child(1) { transition-delay: .05s; }
+        .g-card:nth-child(2) { transition-delay: .15s; }
+        .g-card:nth-child(3) { transition-delay: .1s; }
+        .g-card:nth-child(4) { transition-delay: .2s; }
+        .g-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(29,185,84,.5), transparent);
+            opacity: 0; transition: opacity .3s;
+        }
+        .g-card:hover { border-color: var(--border-hover); background: var(--card-hover); }
+        .g-card:hover::before { opacity: 1; }
+        .g-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.3rem; }
+        .g-card-title { font-size: .95rem; font-weight: 700; }
+        .g-tag {
+            font-size: .67rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+            padding: .22rem .7rem; border-radius: 100px;
+            background: rgba(29,185,84,.1); color: var(--green);
+            border: 1px solid rgba(29,185,84,.2);
+        }
+        .widget-frame {
+            background: rgba(0,0,0,.45); border-radius: 12px;
+            padding: 1.5rem; display: flex; justify-content: center;
+            align-items: center; margin-bottom: 1.25rem; min-height: 155px;
+        }
+        .widget-frame img {
+            max-width: 100%; border-radius: 5px; display: block;
+            transition: transform .3s ease;
+        }
+        .g-card:hover .widget-frame img { transform: scale(1.025); }
+        .g-desc { font-size: .845rem; color: var(--muted); line-height: 1.55; margin-bottom: 1.1rem; }
+        .copy-btn {
             width: 100%;
-            max-width: 900px;
-            padding: 0 1rem 4rem;
+            background: rgba(255,255,255,.05);
+            border: 1px solid var(--border);
+            color: #fff; font-family: 'Inter', sans-serif;
+            font-size: .83rem; font-weight: 600;
+            padding: .62rem; border-radius: 10px;
+            cursor: pointer; transition: all .22s ease;
+            display: flex; align-items: center; justify-content: center; gap: .45rem;
         }
+        .copy-btn:hover { background: var(--green); color: #000; border-color: var(--green); }
+        .copy-btn.done { background: rgba(29,185,84,.12); color: var(--green); border-color: rgba(29,185,84,.3); }
 
-        .card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* ── CODE BLOCK (macOS) ── */
+        .code-section { text-align: center; max-width: 860px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+        .mac-window {
+            background: #141414; border-radius: 14px;
+            border: 1px solid rgba(255,255,255,.07);
+            box-shadow: 0 40px 90px rgba(0,0,0,.65), 0 0 0 1px rgba(0,0,0,.5);
+            overflow: hidden; margin: 3rem 0 2.5rem; text-align: left;
+            opacity: 0; transform: translateY(30px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+        .mac-window.in-view { opacity: 1; transform: translateY(0); }
+        .mac-bar {
+            background: #222; padding: .9rem 1.4rem;
+            display: flex; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,.05);
             position: relative;
-            overflow: hidden;
         }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: -100%;
-            width: 50%; height: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%);
-            transform: skewX(-20deg);
-            transition: left 0.7s ease;
+        .mac-circles { display: flex; gap: .42rem; }
+        .mc { width: 12px; height: 12px; border-radius: 50%; }
+        .mc-r { background: #ff5f57; } .mc-y { background: #ffbd2e; } .mc-g { background: #28c840; }
+        .mac-name {
+            position: absolute; left: 50%; transform: translateX(-50%);
+            font-size: .78rem; color: rgba(255,255,255,.35); font-weight: 500;
         }
-
-        .card:hover::before {
-            left: 200%;
+        .mac-copy {
+            margin-left: auto;
+            background: var(--green); color: #000;
+            border: none; font-family: 'Inter', sans-serif;
+            font-size: .78rem; font-weight: 700;
+            padding: .38rem .95rem; border-radius: 7px;
+            cursor: pointer; transition: all .2s;
         }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            color: #fff;
-        }
-
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-top: 0.5rem;
-        }
-
-        .widget-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.2);
-            border-radius: 16px;
+        .mac-copy:hover { background: var(--green-bright); }
+        .mac-copy.done { background: rgba(29,185,84,.15); color: var(--green); }
+        .mac-body {
             padding: 2rem;
-            margin-bottom: 1.5rem;
-            min-height: 150px;
+            font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+            font-size: .88rem; line-height: 1.85; overflow-x: auto;
         }
+        .c-g   { color: var(--green); }
+        .c-gg  { color: rgba(29,185,84,.55); }
+        .c-b   { color: #79b8ff; }
+        .feat-row { display: flex; justify-content: center; gap: 2.2rem; flex-wrap: wrap; color: var(--muted); font-size: .86rem; }
+        .feat { display: flex; align-items: center; gap: .4rem; }
+        .feat svg { color: var(--green); }
 
-        .widget-img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 5px; /* Matches widget native radius */
-            transition: transform 0.2s ease;
+        /* ── TECH STACK ── */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem; margin-top: 3rem;
         }
-
-        .widget-img:hover {
-            transform: scale(1.02);
+        .tech-card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 1.6rem;
+            opacity: 0; transform: translateY(22px);
+            transition: opacity .5s ease, transform .5s ease, border-color .3s;
         }
-
-        .btn-copy {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .tech-card.in-view { opacity: 1; transform: translateY(0); }
+        .tech-card:nth-child(1) { transition-delay: .05s; }
+        .tech-card:nth-child(2) { transition-delay: .15s; }
+        .tech-card:nth-child(3) { transition-delay: .25s; }
+        .tech-card:nth-child(4) { transition-delay: .35s; }
+        .tech-card:hover { border-color: var(--border-hover); transform: translateY(-5px) !important; }
+        .tech-icon {
+            width: 40px; height: 40px; background: rgba(29,185,84,.1);
+            border-radius: 10px; display: flex; align-items: center; justify-content: center;
+            color: var(--green); font-size: 1.1rem; margin-bottom: 1rem;
         }
+        .tech-name { font-size: .95rem; font-weight: 700; margin-bottom: .45rem; }
+        .tech-desc { font-size: .83rem; color: var(--muted); line-height: 1.55; }
 
-        .btn-copy:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
+        /* ── CTA BOX ── */
+        .cta-wrap { max-width: 800px; margin: 0 auto; padding: 2rem 2rem 7rem; }
+        .cta-box {
+            background: linear-gradient(140deg, #111 0%, #0c1c0e 100%);
+            border: 1px solid rgba(29,185,84,.18);
+            border-radius: 24px; padding: 4.5rem 3rem;
+            text-align: center; position: relative; overflow: hidden;
         }
-
-        .btn-copy.copied {
-            background: #ffffff;
-            color: #000;
-        }
-
-        /* Subtle ambient glow behind cards */
-        .ambient-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(29, 185, 84, 0.15);
-            filter: blur(100px);
-            border-radius: 50%;
-            z-index: -1;
+        .cta-box::before {
+            content: ''; position: absolute;
+            top: -120px; left: 50%; transform: translateX(-50%);
+            width: 340px; height: 340px;
+            background: radial-gradient(circle, rgba(29,185,84,.14), transparent 68%);
             pointer-events: none;
         }
+        .cta-box h2 { font-size: 2.8rem; font-weight: 800; letter-spacing: -.04em; margin-bottom: 1rem; position: relative; }
+        .cta-box p { color: var(--secondary); margin-bottom: 2rem; position: relative; }
 
+        /* ── FOOTER ── */
         footer {
-            margin-top: 2rem;
-            padding: 2rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,.05);
+            padding: 2rem 3rem;
+            display: flex; justify-content: space-between; align-items: center;
+            color: var(--muted); font-size: .83rem;
         }
+        footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+        footer a:hover { color: #fff; }
+        .foot-links { display: flex; gap: 2rem; }
 
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .card { padding: 1.5rem; }
-            .widget-container { padding: 1rem; }
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: 1fr 1fr; }
+            footer { flex-direction: column; gap: 1rem; }
+        }
+        @media (max-width: 480px) {
+            .tech-grid { grid-template-columns: 1fr; }
+            .hero-btns  { flex-direction: column; align-items: center; }
+            .cta-box { padding: 3rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-glow" style="top: 10%; left: 10%;"></div>
-    <div class="ambient-glow" style="bottom: 20%; right: 10%; background: rgba(88, 166, 255, 0.15);"></div>
+<!-- ═══════ NAV ═══════ -->
+<nav>
+    <a href="#" class="nav-logo">
+        <div class="live-dot"></div>
+        spotify-widget
+    </a>
+    <ul class="nav-links">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#integrate">Integrate</a></li>
+        <li><a href="#tech">Stack</a></li>
+        <li><a href="https://github.com/raunak0400" target="_blank" class="nav-gh">GitHub</a></li>
+    </ul>
+</nav>
 
-    <header>
-        <h1>Widget Showcase</h1>
-        <p class="subtitle">A collection of beautiful, real-time Spotify "Now Playing" widgets for your GitHub profile. All generated dynamically via serverless functions.</p>
-    </header>
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+    <canvas id="topo-canvas"></canvas>
+    <div class="hero-inner">
+        <div class="badge">
+            <div class="live-dot" style="width:6px;height:6px;"></div>
+            Live Spotify Widget Gallery
+        </div>
+        <h1 class="hero-title">Showcase Your <span class="green">Vibe.</span></h1>
+        <p class="hero-sub">A live Spotify Now Playing widget for your GitHub profile.<br>Customizable. Beautiful. Always in sync.</p>
 
-    <div class="gallery">
-
-        <!-- Variant 1: Blur Dark (User's Favorite) -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2 class="card-title">Dark Glassmorphism</h2>
-                    <p class="card-desc">The signature look. Frosted dark glass with a clean white border.</p>
+        <div class="widget-stage">
+            <div class="widget-3d-wrap" id="tilt-wrap">
+                <div class="widget-card" id="tilt-card">
+                    <img src="/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Live Spotify Widget" />
                 </div>
-                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff')">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    Copy Markdown
-                </button>
-            </div>
-            <div class="widget-container">
-                <a href="/redirect" target="_blank">
-                    <img class="widget-img" src="/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Spotify Now Playing" width="540" />
-                </a>
             </div>
         </div>
 
-        <!-- Variant 2: Default Color -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2 class="card-title">Standard Theme</h2>
-                    <p class="card-desc">The default flat dark background with a subtle aesthetic.</p>
-                </div>
-                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator')">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    Copy Markdown
-                </button>
+        <div class="hero-btns">
+            <a href="#gallery" class="btn-solid">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+                Try the Playground
+            </a>
+            <a href="https://github.com/raunak0400" target="_blank" class="btn-ghost">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════ GALLERY ═══════ -->
+<div class="section-wrap" id="gallery">
+    <span class="section-label">Widget Gallery</span>
+    <h2 class="section-title">Every Style. One API.</h2>
+    <p class="section-sub">All widgets render your actual Spotify data in real time. Click any to copy its Markdown.</p>
+
+    <div class="gallery-grid">
+
+        <!-- Dark Glass -->
+        <div class="g-card">
+            <div class="g-card-head">
+                <span class="g-card-title">Dark Glassmorphism</span>
+                <span class="g-tag">★ Recommended</span>
             </div>
-            <div class="widget-container">
-                <a href="/redirect" target="_blank">
-                    <img class="widget-img" src="/api/orchestrator" alt="Spotify Now Playing" width="540" />
-                </a>
+            <div class="widget-frame">
+                <img src="/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Dark Glass" loading="lazy" />
             </div>
+            <p class="g-desc">Frosted dark glass with a crisp white border. Album art blurs beautifully into the background.</p>
+            <button class="copy-btn" onclick="cpMd(this,'/api/orchestrator?background_type=blur_dark&border_color=ffffff')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Markdown
+            </button>
         </div>
 
-        <!-- Variant 3: Compact Mode -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2 class="card-title">Compact Mode</h2>
-                    <p class="card-desc">A minimal 400x80 design, perfect for inline placement next to other badges.</p>
-                </div>
-                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true')">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    Copy Markdown
-                </button>
+        <!-- Light Glass -->
+        <div class="g-card">
+            <div class="g-card-head">
+                <span class="g-card-title">Light Glassmorphism</span>
+                <span class="g-tag">Light Mode</span>
             </div>
-            <div class="widget-container">
-                <a href="/redirect" target="_blank">
-                    <img class="widget-img" src="/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" alt="Spotify Now Playing" width="400" />
-                </a>
+            <div class="widget-frame" style="background:rgba(255,255,255,.07);">
+                <img src="/api/orchestrator?background_type=blur_light&border_color=e2e2e2" alt="Light Glass" loading="lazy" />
             </div>
+            <p class="g-desc">A frosted light-glass variant built for light-mode GitHub profiles. Airy and vibrant.</p>
+            <button class="copy-btn" onclick="cpMd(this,'/api/orchestrator?background_type=blur_light&border_color=e2e2e2')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Markdown
+            </button>
         </div>
 
-        <!-- Variant 4: Blur Light -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h2 class="card-title">Light Glassmorphism</h2>
-                    <p class="card-desc">For light-mode enthusiasts. Frosted light glass with a dark border.</p>
-                </div>
-                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_light&border_color=333333')">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    Copy Markdown
-                </button>
+        <!-- Standard -->
+        <div class="g-card">
+            <div class="g-card-head">
+                <span class="g-card-title">Standard Dark</span>
+                <span class="g-tag">Default</span>
             </div>
-            <div class="widget-container" style="background: rgba(255,255,255,0.1);">
-                <a href="/redirect" target="_blank">
-                    <img class="widget-img" src="/api/orchestrator?background_type=blur_light&border_color=333333" alt="Spotify Now Playing" width="540" />
-                </a>
+            <div class="widget-frame">
+                <img src="/api/orchestrator" alt="Standard" loading="lazy" />
             </div>
+            <p class="g-desc">Classic flat dark card. Minimal, clean, with album-art-extracted color gradients on the text.</p>
+            <button class="copy-btn" onclick="cpMd(this,'/api/orchestrator')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Markdown
+            </button>
+        </div>
+
+        <!-- Compact -->
+        <div class="g-card">
+            <div class="g-card-head">
+                <span class="g-card-title">Compact Mode</span>
+                <span class="g-tag">400 × 80</span>
+            </div>
+            <div class="widget-frame">
+                <img src="/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" alt="Compact" loading="lazy" />
+            </div>
+            <p class="g-desc">A sleek 400×80 banner. Ideal for placing inline next to other profile badges.</p>
+            <button class="copy-btn" onclick="cpMd(this,'/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Markdown
+            </button>
         </div>
 
     </div>
+</div>
 
-    <footer>
-        Designed and built for <a href="https://github.com/raunak0400" target="_blank">@raunak0400</a>
-    </footer>
+<!-- ═══════ CODE BLOCK ═══════ -->
+<div class="code-section" id="integrate">
+    <span class="section-label">Easy Integration</span>
+    <h2 class="section-title">Copy &amp; Paste to Go Live</h2>
+    <p class="section-sub" style="margin:0 auto;">Paste this one line of Markdown into your GitHub profile README and you're live in seconds.</p>
 
-    <script>
-        function copyMarkdown(btn, url) {
-            const markdown = `[![Spotify Now Playing](${url})](https://open.spotify.com/user/raunak0400)`;
-            navigator.clipboard.writeText(markdown).then(() => {
-                const originalText = btn.innerHTML;
-                btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
-                btn.classList.add('copied');
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.remove('copied');
-                }, 2000);
-            });
+    <div class="mac-window" id="mac-win">
+        <div class="mac-bar">
+            <div class="mac-circles">
+                <div class="mc mc-r"></div>
+                <div class="mc mc-y"></div>
+                <div class="mc mc-g"></div>
+            </div>
+            <span class="mac-name">README.md</span>
+            <button class="mac-copy" id="mac-btn" onclick="cpCode()">Copy Code</button>
+        </div>
+        <div class="mac-body">
+<span class="c-g">[![Spotify Now Playing](<span class="c-b">https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&amp;border_color=ffffff</span>)](<span class="c-b">https://open.spotify.com/user/raunak0400</span>)</span>
+<span class="c-gg">&lt;!-- Optional: ?background_type=blur_light|blur_dark|color --&gt;</span>
+<span class="c-gg">&lt;!-- Optional: &amp;border_color=ffffff  &amp;compact=true  &amp;show_status=true --&gt;</span>
+        </div>
+    </div>
+
+    <div class="feat-row">
+        <div class="feat">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            One-line install
+        </div>
+        <div class="feat">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            No signup required
+        </div>
+        <div class="feat">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Free forever
+        </div>
+    </div>
+</div>
+
+<!-- ═══════ TECH STACK ═══════ -->
+<div class="section-wrap" id="tech">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Powered by modern tech.</h2>
+    <p class="section-sub">A lean serverless stack that keeps response times under 100ms globally.</p>
+
+    <div class="tech-grid">
+        <div class="tech-card">
+            <div class="tech-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02h.01l-.01 3.47.02.18.03.14.04.11.07.08.08.06.1.03.1.02.11.02.28.01h3.52l-.01-3.47.01-.17.03-.21.07-.26.12-.3.18-.34.24-.37.31-.38.38-.4.46-.39.53-.37.61-.35.68-.3.75-.26.82-.22.88-.18.95-.13 1.01-.09 1.08-.05z"/></svg>
+            </div>
+            <h3 class="tech-name">Python</h3>
+            <p class="tech-desc">Core backend logic handles auth token management and API requests.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+            </div>
+            <h3 class="tech-name">Flask</h3>
+            <p class="tech-desc">Lightweight web framework exposes the single /api/orchestrator endpoint.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">
+                <svg width="20" height="20" viewBox="0 0 168 168" fill="currentColor"><path d="M83.996.277C37.747.277.253 37.77.253 84.019c0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.246-37.49-83.742-83.744-83.742zm36.85 119.654l-13.433-20.64c2.453-3.064 4.609-6.291 6.44-9.652h17.048c-.523 1.742-1.106 3.455-1.741 5.132l-8.314 25.16zm-63.19 27.572c-10.08-2.94-19.335-8.326-27.016-15.697L47.16 114.79c6.09 5.748 13.285 10.047 21.044 12.609l-10.548 19.104zm-5.43-50.38c0-16.351 13.285-29.63 29.63-29.63 8.338 0 15.834 3.477 21.26 9.02l-14.51 14.51c-1.864-1.574-4.277-2.545-6.75-2.545-5.934 0-10.7 4.768-10.7 10.645 0 5.934 4.766 10.7 10.7 10.7a10.7 10.7 0 006.75-2.547l14.51 14.51c-5.426 5.543-12.922 9.02-21.26 9.02-16.345 0-29.63-13.283-29.63-29.633z"/></svg>
+            </div>
+            <h3 class="tech-name">Spotify API</h3>
+            <p class="tech-desc">Fetches your real-time Now Playing or last-played track with OAuth 2.0.</p>
+        </div>
+        <div class="tech-card">
+            <div class="tech-icon">
+                <svg width="20" height="20" viewBox="0 0 76 76" fill="currentColor"><path d="M37.986 0C17.007 0 0 17.01 0 37.986c0 20.979 17.007 37.986 37.986 37.986 20.978 0 37.985-17.007 37.985-37.986C75.971 17.01 58.964 0 37.986 0zm.032 10.928c10.24 0 19.467 4.56 25.744 11.79L37.986 48.463 12.244 22.718c6.274-7.23 15.497-11.79 25.774-11.79zM10.928 37.986c0-4.084.78-8 2.185-11.614l24.873 24.873-24.872 24.873A37.756 37.756 0 0110.928 37.986zm27.09 27.09l24.872-24.874a37.763 37.763 0 012.183 11.784 37.758 37.758 0 01-2.183 11.613L38.018 77.47l-.002-12.394z"/></svg>
+            </div>
+            <h3 class="tech-name">Vercel</h3>
+            <p class="tech-desc">Serverless deployment with edge caching for sub-100ms global response times.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════ CTA ═══════ -->
+<div class="cta-wrap">
+    <div class="cta-box">
+        <h2>Star it on GitHub</h2>
+        <p>Open source and free forever. Fork it, customize it, make it your own.</p>
+        <a href="https://github.com/raunak0400" target="_blank" class="btn-solid" style="display:inline-flex;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            View Source on GitHub
+        </a>
+    </div>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+    <span>Spotify Widget Gallery. Open source.</span>
+    <div class="foot-links">
+        <a href="https://github.com/raunak0400" target="_blank">GitHub</a>
+        <a href="/showcase">Docs</a>
+    </div>
+</footer>
+
+<script>
+/* ════════════════════════════════════════
+   TOPOGRAPHIC WAVE CANVAS
+════════════════════════════════════════ */
+const canvas = document.getElementById('topo-canvas');
+const ctx    = canvas.getContext('2d');
+let W, H, lns = [], frame = 0;
+const N = 30, GREEN = '#1db954';
+
+function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    build();
+}
+
+function build() {
+    lns = [];
+    for (let i = 0; i < N; i++) {
+        lns.push({
+            baseY : (H / (N - 1)) * i,
+            amp   : 18 + Math.random() * 38,
+            freq  : .0035 + Math.random() * .006,
+            phase : Math.random() * Math.PI * 2,
+            speed : .005 + Math.random() * .007,
+            alpha : .08 + (Math.abs(i - N / 2) / (N / 2)) * .22
+        });
+    }
+}
+
+function tick() {
+    ctx.clearRect(0, 0, W, H);
+    frame++;
+    lns.forEach(l => {
+        ctx.beginPath();
+        ctx.strokeStyle = GREEN;
+        ctx.lineWidth   = 1;
+        ctx.globalAlpha = l.alpha;
+        for (let x = 0; x <= W; x += 3) {
+            const y = l.baseY
+                + Math.sin(x * l.freq + l.phase + frame * l.speed) * l.amp
+                + Math.sin(x * l.freq * .45 + l.phase * 1.4 + frame * l.speed * .6) * l.amp * .35;
+            x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
-    </script>
+        ctx.stroke();
+    });
+    requestAnimationFrame(tick);
+}
+
+window.addEventListener('resize', resize);
+resize(); tick();
+
+/* ════════════════════════════════════════
+   3-D TILT ON HERO WIDGET
+════════════════════════════════════════ */
+const tiltWrap = document.getElementById('tilt-wrap');
+const tiltCard = document.getElementById('tilt-card');
+
+tiltWrap.addEventListener('mousemove', e => {
+    const r  = tiltWrap.getBoundingClientRect();
+    const rx = ((e.clientY - r.top  - r.height / 2) / (r.height / 2)) * -12;
+    const ry = ((e.clientX - r.left - r.width  / 2) / (r.width  / 2)) *  12;
+    tiltCard.style.animation = 'none';
+    tiltCard.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+});
+
+tiltWrap.addEventListener('mouseleave', () => {
+    tiltCard.style.transform = '';
+    tiltCard.style.animation = '';
+});
+
+/* ════════════════════════════════════════
+   INTERSECTION OBSERVER (SCROLL REVEAL)
+════════════════════════════════════════ */
+const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+}, { threshold: .12 });
+
+document.querySelectorAll('.g-card, .tech-card, .mac-window').forEach(el => io.observe(el));
+
+/* ════════════════════════════════════════
+   COPY HELPERS
+════════════════════════════════════════ */
+function cpMd(btn, path) {
+    const url = `https://raunak0400.vercel.app${path}`;
+    const md  = `[![Spotify Now Playing](${url})](https://open.spotify.com/user/raunak0400)`;
+    navigator.clipboard.writeText(md).then(() => flash(btn));
+}
+
+function cpCode() {
+    const code = `[![Spotify Now Playing](https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff)](https://open.spotify.com/user/raunak0400)`;
+    const btn  = document.getElementById('mac-btn');
+    navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('done');
+        setTimeout(() => { btn.textContent = 'Copy Code'; btn.classList.remove('done'); }, 2200);
+    });
+}
+
+function flash(btn) {
+    const orig = btn.innerHTML;
+    btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+    btn.classList.add('done');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('done'); }, 2200);
+}
+
+/* ════════════════════════════════════════
+   SMOOTH SCROLL
+════════════════════════════════════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+});
+</script>
 </body>
 </html>
