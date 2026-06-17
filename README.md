@@ -74,7 +74,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <div align="center">
   <a href="https://open.spotify.com/user/raunak0400">
-    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff" width="420" alt="Spotify Now Playing" />
+    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Spotify Now Playing" />
   </a>
 </div>
 
