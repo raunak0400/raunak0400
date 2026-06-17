@@ -655,6 +655,23 @@ def preview_page() -> Response:
     return Response("preview.html not found", status=404, mimetype="text/plain")
 
 
+@app.route("/showcase")
+def showcase_page() -> Response:
+    """Serve the premium showcase page."""
+    candidates = [
+        os.path.join(os.getcwd(), "showcase.html"),
+        os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            "showcase.html",
+        ),
+    ]
+    for path in candidates:
+        if os.path.isfile(path):
+            with open(path, "r", encoding="utf-8") as f:
+                return Response(f.read(), mimetype="text/html")
+    return Response("showcase.html not found", status=404, mimetype="text/plain")
+
+
 @app.route("/redirect")
 def redirect_to_song() -> Response:
     """Redirect to the currently playing song."""

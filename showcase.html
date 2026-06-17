@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Widget Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --accent: #1db954; /* Spotify Green */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background: #0f0c29;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #121212);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            text-align: center;
+            margin: 4rem 1rem 2rem;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff, #a8a8a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 100%;
+            max-width: 900px;
+            padding: 0 1rem 4rem;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg);
+            transition: left 0.7s ease;
+        }
+
+        .card:hover::before {
+            left: 200%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .widget-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            min-height: 150px;
+        }
+
+        .widget-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px; /* Matches widget native radius */
+            transition: transform 0.2s ease;
+        }
+
+        .widget-img:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-copy {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-copy:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
+        }
+
+        .btn-copy.copied {
+            background: #ffffff;
+            color: #000;
+        }
+
+        /* Subtle ambient glow behind cards */
+        .ambient-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(29, 185, 84, 0.15);
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .card { padding: 1.5rem; }
+            .widget-container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow" style="top: 10%; left: 10%;"></div>
+    <div class="ambient-glow" style="bottom: 20%; right: 10%; background: rgba(88, 166, 255, 0.15);"></div>
+
+    <header>
+        <h1>Widget Showcase</h1>
+        <p class="subtitle">A collection of beautiful, real-time Spotify "Now Playing" widgets for your GitHub profile. All generated dynamically via serverless functions.</p>
+    </header>
+
+    <div class="gallery">
+
+        <!-- Variant 1: Blur Dark (User's Favorite) -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Dark Glassmorphism</h2>
+                    <p class="card-desc">The signature look. Frosted dark glass with a clean white border.</p>
+                </div>
+                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Markdown
+                </button>
+            </div>
+            <div class="widget-container">
+                <a href="/redirect" target="_blank">
+                    <img class="widget-img" src="/api/orchestrator?background_type=blur_dark&border_color=ffffff" alt="Spotify Now Playing" width="540" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Variant 2: Default Color -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Standard Theme</h2>
+                    <p class="card-desc">The default flat dark background with a subtle aesthetic.</p>
+                </div>
+                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Markdown
+                </button>
+            </div>
+            <div class="widget-container">
+                <a href="/redirect" target="_blank">
+                    <img class="widget-img" src="/api/orchestrator" alt="Spotify Now Playing" width="540" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Variant 3: Compact Mode -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Compact Mode</h2>
+                    <p class="card-desc">A minimal 400x80 design, perfect for inline placement next to other badges.</p>
+                </div>
+                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Markdown
+                </button>
+            </div>
+            <div class="widget-container">
+                <a href="/redirect" target="_blank">
+                    <img class="widget-img" src="/api/orchestrator?background_type=blur_dark&border_color=ffffff&compact=true" alt="Spotify Now Playing" width="400" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Variant 4: Blur Light -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">Light Glassmorphism</h2>
+                    <p class="card-desc">For light-mode enthusiasts. Frosted light glass with a dark border.</p>
+                </div>
+                <button class="btn-copy" onclick="copyMarkdown(this, 'https://raunak0400.vercel.app/api/orchestrator?background_type=blur_light&border_color=333333')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Markdown
+                </button>
+            </div>
+            <div class="widget-container" style="background: rgba(255,255,255,0.1);">
+                <a href="/redirect" target="_blank">
+                    <img class="widget-img" src="/api/orchestrator?background_type=blur_light&border_color=333333" alt="Spotify Now Playing" width="540" />
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Designed and built for <a href="https://github.com/raunak0400" target="_blank">@raunak0400</a>
+    </footer>
+
+    <script>
+        function copyMarkdown(btn, url) {
+            const markdown = `[![Spotify Now Playing](${url})](https://open.spotify.com/user/raunak0400)`;
+            navigator.clipboard.writeText(markdown).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
