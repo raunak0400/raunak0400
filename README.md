@@ -34,6 +34,16 @@ I am a full-stack developer with over 2 years of experience in building scalable
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
+## 🎵 Now Playing on Spotify
+
+<div align="center">
+  <a href="https://open.spotify.com/user/raunak0400">
+    <img src="https://raunak0400.vercel.app/api/orchestrator?background_type=blur_dark&border_color=ffffff&show_status=true" alt="Spotify Now Playing" />
+  </a>
+</div>
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 ## **💻 About Me**
 
 <img align="right" alt="Coding" width="320" src="https://raw.githubusercontent.com/shahriyor-sharifjonov/shahriyor-sharifjonov/master/coding-2.gif">

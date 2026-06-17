@@ -1,0 +1,387 @@
+<svg 
+    viewBox="0 0 {{ width }} {{ height }}" 
+    preserveAspectRatio="xMidYMid meet" 
+    style="width: 100%; height: auto; display: block; max-width: {{ width }}px;"
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    {# ── SVG-level style: bar animations (applies to native <rect> elements) ── #}
+    <style>
+        .bar {
+            /* shape-rendering: crispEdges; Removed for smooth path rendering */
+            opacity: 0.85;
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation-name: pulse, barcolor;
+            animation-iteration-count: infinite, infinite;
+            animation-direction: alternate, normal;
+            animation-timing-function: ease-out, linear;
+        }
+
+        @keyframes pulse {
+            0%   { transform: scaleY(0.50); }
+            100% { transform: scaleY(1); }
+        }
+
+        {{ bar_css | safe }}
+    </style>
+
+    <foreignObject width="{{ width }}" height="{{ height }}" x="0" y="0">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container {% if use_blur_background %}blur-bg{% endif %} {% if blur_is_dark %}blur-dark{% else %}blur-light{% endif %}">
+            <style>
+                :root {
+                    /* Colors (runtime — from request params + palette extraction) */
+                    --background-color: #{{ background_color }};
+                    --border-color: #{{ border_color }};
+                    --song-color-1: rgb({{ song_palette[0][0] }}, {{ song_palette[0][1] }}, {{ song_palette[0][2] }});
+                    --song-color-2: rgb({{ song_palette[1][0] }}, {{ song_palette[1][1] }}, {{ song_palette[1][2] }});
+                    --bar-color-1: rgb({{ bar_palette[0][0] }}, {{ bar_palette[0][1] }}, {{ bar_palette[0][2] }});
+
+                    /* Dimensions, layout (all from config.py via orchestrator) */
+                    --border-radius: {{ border_radius }}px;
+                    --album-size: {{ album_size }}px;
+                    --widget-border-width: {{ widget_border_width }}px;
+                    --widget-padding-top: {{ widget_padding_top }}px;
+                    --widget-padding-right: {{ widget_padding_right }}px;
+                    --widget-padding-bottom: {{ widget_padding_bottom }}px;
+                    --widget-padding-left: {{ widget_padding_left }}px;
+                    --art-content-gap: {{ art_content_gap }}px;
+                    --eq-spacer-height: {{ eq_spacer_height }}px;
+                    --eq-spacer-margin-top: {{ eq_spacer_margin_top }}px;
+                    --artist-margin-top: {{ artist_margin_top }}px;
+
+                    /* Blur (from config.py) */
+                    --blur-amount: {{ blur_amount }}px;
+                    --blur-overlay-opacity: {{ blur_overlay_opacity }};
+
+                    /* Audio-reactive (computed at render time) */
+                    --beat-duration: {{ beat_duration_ms }}ms;
+                    --glow-intensity: {{ energy * 0.6 }};
+                    --bar-glow: rgba({{ bar_palette[1][0] }}, {{ bar_palette[1][1] }}, {{ bar_palette[1][2] }}, var(--glow-intensity));
+                }
+
+                * {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--border-radius);
+                    padding: var(--widget-padding-top) var(--widget-padding-right) var(--widget-padding-bottom) var(--widget-padding-left);
+                    overflow: hidden;
+                    {% block container_styles %}
+                    background-color: var(--background-color);
+                    border: var(--widget-border-width) solid var(--border-color);
+                    {% endblock %}
+                }
+
+                /* Blurred background styles */
+                .container.blur-bg {
+                    background: transparent;
+                    border: var(--widget-border-width) solid var(--border-color);
+                }
+
+                .blur-background {
+                    display: none;
+                }
+
+                .container.blur-bg .blur-background {
+                    display: block;
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    right: -20px;
+                    bottom: -20px;
+                    z-index: -2;
+                    background-image: url("data:image/png;base64,{{ image }}");
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(var(--blur-amount)) saturate(1.2);
+                    transform: scale(1.1);
+                }
+
+                .blur-overlay {
+                    display: none;
+                }
+
+                .container.blur-bg .blur-overlay {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    border-radius: var(--border-radius);
+                }
+
+                .container.blur-bg.blur-dark .blur-overlay {
+                    background: rgba(0, 0, 0, var(--blur-overlay-opacity));
+                }
+
+                .container.blur-bg.blur-light .blur-overlay {
+                    background: rgba(255, 255, 255, var(--blur-overlay-opacity));
+                }
+
+                /* Text shadow for blur backgrounds (keeps default gradient colors) */
+                .container.blur-bg.blur-dark .song-text,
+                .container.blur-bg.blur-dark .artist-text,
+                .container.blur-bg.blur-dark .status {
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.9))
+                            drop-shadow(0 0 3px rgba(0,0,0,0.6));
+                }
+
+                .container.blur-bg.blur-light .song-text,
+                .container.blur-bg.blur-light .artist-text,
+                .container.blur-bg.blur-light .status {
+                    filter: brightness(0.55)
+                            drop-shadow(0 0 1px rgba(255,255,255,0.9))
+                            drop-shadow(0 0 3px rgba(255,255,255,0.5));
+                }
+
+                .main {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    gap: var(--art-content-gap);
+                }
+
+                .art {
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .art:hover .cover {
+                    transform: scale(1.02);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+
+                .content {
+                    flex: 1;
+                    min-width: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                /* --- Song / Artist clip containers --- */
+                .song, .artist {
+                    width: 100%;
+                    overflow: hidden;
+                    text-align: center;
+                }
+
+                .song.has-marquee,
+                .artist.has-marquee {
+                    text-align: left;
+                }
+
+                .artist {
+                    margin-top: var(--artist-margin-top);
+                }
+
+                /* --- Inner text spans (carry gradient + scroll) --- */
+                .song-text {
+                    display: inline-block;
+                    white-space: nowrap;
+                    font-size: {{ song_font_size }}px;
+                    font-weight: 500;
+                    background: linear-gradient(125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    background-position: 0% 50%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 15s ease infinite;
+                    transition: opacity 0.2s ease;
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                .artist-text {
+                    display: inline-block;
+                    white-space: nowrap;
+                    font-size: {{ artist_font_size }}px;
+                    background: linear-gradient(-125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    background-position: 0% 50%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 12s ease infinite;
+                    transition: opacity 0.2s ease;
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                .song:hover .song-text,
+                .artist:hover .artist-text {
+                    opacity: 0.8;
+                }
+
+                /* --- Marquee: continuous ticker ---
+                   translateX(-50%) gives pixel-perfect loop alignment.
+                   The tiny margin-left change keeps the layout engine
+                   engaged so the browser cannot cull off-screen content
+                   in SVG foreignObject. */
+                .marquee-track {
+                    display: flex;
+                    white-space: nowrap;
+                    width: max-content;
+                    will-change: transform;
+                    backface-visibility: hidden;
+                    justify-content: flex-start;
+                    animation: marquee var(--scroll-duration) linear infinite;
+                }
+
+                .has-marquee .song-text,
+                .has-marquee .artist-text {
+                    filter: none;
+                }
+
+                .marquee-spacer {
+                    flex-shrink: 0;
+                    width: 50px;
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-33.333%);
+                    }
+                }
+
+                .cover {
+                    width: var(--album-size);
+                    height: var(--album-size);
+                    border-radius: var(--border-radius);
+                    object-fit: cover;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                }
+
+                .container.blur-bg .cover {
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+                }
+                
+                /* Add glow effect to album art matching the palette */
+                .container.blur-bg.blur-dark .cover {
+                    box-shadow: 
+                        0 4px 15px rgba(0, 0, 0, 0.4),
+                        0 0 20px var(--bar-glow);
+                }
+
+                /* Spacer reserves vertical space where SVG bars are overlaid */
+                #bars-spacer {
+                    height: var(--eq-spacer-height);
+                    margin-top: var(--eq-spacer-margin-top);
+                    width: 100%;
+                }
+
+                .status {
+                    font-size: 12px;
+                    text-align: center;
+                    margin-bottom: 4px;
+                    opacity: 0.7;
+                    background: linear-gradient(-125deg, var(--song-color-1), var(--song-color-2));
+                    background-size: 200% 100%;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: gradient 17s ease infinite;
+                    /* Contrasting outline for legibility */
+                    filter: drop-shadow(0 0 1px rgba(0,0,0,0.8))
+                            drop-shadow(0 0 2px rgba(0,0,0,0.5));
+                }
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                }
+
+                div {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+                }
+
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                {% block theme_styles %}{% endblock %}
+            </style>
+
+            <!-- Blurred background layer -->
+            <div class="blur-background"></div>
+            <div class="blur-overlay"></div>
+
+            <div class="main">
+                <a class="art" href="{{ song_uri }}" target="_blank" title="Open in {{ service_name | default('music app') }}">
+                    <img src="data:image/png;base64,{{ image }}" class="cover" alt="Album art" />
+                </a>
+
+                <div class="content">
+                    {% if show_status %}
+                    <div class="status">{{ status }}</div>
+                    {% endif %}
+                    <a href="{{ song_uri }}" target="_blank">
+                        <div class="song {% if song_marquee.enabled %}has-marquee{% endif %}" title="{{ song_name }}">
+                            {% if song_marquee.enabled %}
+                            <span class="marquee-track" style="--scroll-duration: {{ song_marquee.duration }}s;">
+                                <span class="song-text">{{ song_name }}</span>
+                                <span class="marquee-spacer"></span>
+                                <span class="song-text">{{ song_name }}</span>
+                                <span class="marquee-spacer"></span>
+                                <span class="song-text">{{ song_name }}</span>
+                                <span class="marquee-spacer"></span>
+                            </span>
+                            {% else %}
+                            <span class="song-text">{{ song_name }}</span>
+                            {% endif %}
+                        </div>
+                    </a>
+                    <a href="{{ artist_uri }}" target="_blank">
+                        <div class="artist {% if artist_marquee.enabled %}has-marquee{% endif %}" title="{{ artist_name }}">
+                            {% if artist_marquee.enabled %}
+                            <span class="marquee-track" style="--scroll-duration: {{ artist_marquee.duration }}s;">
+                                <span class="artist-text">{{ artist_name }}</span>
+                                <span class="marquee-spacer"></span>
+                                <span class="artist-text">{{ artist_name }}</span>
+                                <span class="marquee-spacer"></span>
+                                <span class="artist-text">{{ artist_name }}</span>
+                                <span class="marquee-spacer"></span>
+                            </span>
+                            {% else %}
+                            <span class="artist-text">{{ artist_name }}</span>
+                            {% endif %}
+                        </div>
+                    </a>
+                    <div id="bars-spacer"></div>
+                </div>
+            </div>
+
+        </div>
+    </foreignObject>
+
+    {# ── Native SVG bars — painted on top of foreignObject, scale as vectors ── #}
+    <g id="bars">
+        {{ bar_svg | safe }}
+    </g>
+</svg>
