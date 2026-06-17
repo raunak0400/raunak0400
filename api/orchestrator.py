@@ -316,14 +316,21 @@ def get_template_name() -> str:
 def escape_xml(text: str) -> str:
     """
     Escape special characters for XML/SVG compatibility.
-    
+
     Args:
         text: Text to escape
-        
+
     Returns:
-        Escaped text safe for XML
+        Escaped text safe for XML attributes and content
     """
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    return (
+        text.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            .replace("'", "&#39;")
+    )
+
 
 
 def calculate_marquee(text: str, font_size: int, container_width: int = 330) -> dict:
