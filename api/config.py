@@ -26,9 +26,9 @@ ColorPalette = list[RGBColor]
 class SpotifyConfig:
     """Spotify API configuration."""
 
-    client_id: str = field(default_factory=lambda: os.getenv("SPOTIFY_CLIENT_ID", ""))
-    client_secret: str = field(default_factory=lambda: os.getenv("SPOTIFY_SECRET_ID", ""))
-    refresh_token: str = field(default_factory=lambda: os.getenv("SPOTIFY_REFRESH_TOKEN", ""))
+    client_id: str = field(default_factory=lambda: os.getenv("SPOTIFY_CLIENT_ID", "").strip())
+    client_secret: str = field(default_factory=lambda: os.getenv("SPOTIFY_SECRET_ID", "").strip())
+    refresh_token: str = field(default_factory=lambda: os.getenv("SPOTIFY_REFRESH_TOKEN", "").strip())
 
     # API URLs
     token_url: str = "https://accounts.spotify.com/api/token"
