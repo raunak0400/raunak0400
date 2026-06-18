@@ -258,7 +258,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
 ## My Contribution Graph
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+  <img src="https://raw.githubusercontent.com/raunak0400/raunak0400/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="600" />
 </div>
 
 
