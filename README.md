@@ -200,7 +200,7 @@ I am a full-stack developer with over 2 years of experience in building scalable
       <br>Docker
     </td>
     <td align="center" width="116">
-        <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" alt="Git" width="40" height="40"><br>
+        <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" alt="Git" width="28" height="28" />
       <br>Git
     </td>
     <td align="center" width="116">
@@ -214,6 +214,10 @@ I am a full-stack developer with over 2 years of experience in building scalable
     <td align="center" width="116">
         <img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions" width="40" height="40" />
       <br>GitHub Actions
+    </td>
+    <td align="center" width="116">
+        <img src="https://skillicons.dev/icons?i=kafka" alt="Kafka" width="40" height="40" />
+      <br>Kafka
     </td>
   </tr>
 </table>
